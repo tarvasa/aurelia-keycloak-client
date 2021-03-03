@@ -1,18 +1,23 @@
  import Keycloak from 'keycloak-js';
  import { inject, bindable } from 'aurelia-framework';
+ import {keycloakViewModel} from "./keycloak-view-model";
  
+ @inject(keycloakViewModel)
  export class AuthView {
 
  /**
   * Auth-view-komponentti ottaa authenticated-muuttujan kiinni 
-  * ja siirtää sen view-modeliin(auth-view.js? ). 
+  * ja siirtää sen view-modeliin(auth-view.js vai keycloakViewModel? ). 
   * View-modellissa voi olla muuttuja authenticated
-    authenticated
   * 
   */
 
   @bindable
   authenticated;
+
+  constructor(keycloakViewModel) {
+    this.keycloakViewModel = keycloakViewModel;
+  }
 
    initKeycloak() {
      const keycloak = Keycloak({

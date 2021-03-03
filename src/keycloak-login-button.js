@@ -5,3 +5,13 @@
 <keycloak-login-button click.trigger="initKeycloak()"></keycloak-login-button>
 initKeycloak-funktio on komponentin parentilla auth-viewllä
  */
+
+export class keycloakLoginButton {
+  
+  value="Sign In";
+
+  constructor(AuthView) {
+    this.initKeycloak = AuthView.initKeycloak();
+  }
+
+}

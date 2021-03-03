@@ -1,0 +1,13 @@
+<template>
+<require from "./auth-view"></require>
+<require from "./keycloak-login-button"></require>
+  <section class="au-animate">
+    <h2>${heading}</h2>
+    <p>${message}</p>
+  </section>
+  <section>
+    <auth-view keycloak-view-model="keycloakViewModel" authenticated.two-way="keycloak.authenticated">
+      <keycloak-login-button type="btn" click.trigger="initKeycloak()">Login In</keycloak-login-button> 
+    </auth-view>
+  </section>
+</template>

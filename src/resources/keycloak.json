@@ -1,0 +1,8 @@
+{
+  "realm": "AureliaClient",
+  "auth-server-url": "http://localhost:9000/auth/",
+  "ssl-required": "external",
+  "resource": "aurealia-client",
+  "public-client": true,
+  "confidential-port": 0
+}
